@@ -20,7 +20,7 @@ RUN set -eux; \
     chmod +x /usr/local/bin/gosu; \
     apk del .gosu-deps
 
-RUN apk add git bash
+RUN apk add git bash openssh-client
 RUN mkdir /project; mkdir -p /home/user/.ssh/
 COPY entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/entrypoint.sh
