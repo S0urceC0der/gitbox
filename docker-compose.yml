@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  git:
+    environment:
+      - LOCAL_USER_ID=1000
+    image: local/gitbox
+    command: /bin/bash
+    volumes:
+      - LOCAL_VOLUME:/project
